@@ -1,0 +1,16 @@
+{
+  "name": "@telegram-xp-bot/bot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "@telegram-xp-bot/database": "1.0.0",
+    "telegraf": "^3.32.0"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
