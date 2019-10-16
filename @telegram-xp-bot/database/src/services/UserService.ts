@@ -1,6 +1,5 @@
 import { User } from "../models/User.model";
 import { ServiceUtil } from "./ServiceUtil";
-import { Chat } from "../models/Chat.model";
 import { getConnection } from "typeorm";
 import { ChatUser } from "../models/ChatUser.model";
 
