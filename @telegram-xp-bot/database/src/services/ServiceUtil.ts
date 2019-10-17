@@ -21,7 +21,7 @@ export class ServiceUtil {
 
         const chatUser = await this.findChatUser(requestingUserId, forChatId);
 
-        if (!chatUser.can(functionName)) {
+        if (chatUser.can(functionName)) {
             return;
         } else {
             throw new Error("Unauthorized.");
