@@ -1,4 +1,4 @@
-import { Entity, PrimaryGeneratedColumn, Column, PrimaryColumn } from "typeorm";
+import { Entity, PrimaryGeneratedColumn, Column, PrimaryColumn, ManyToMany, JoinTable, ManyToOne } from "typeorm";
 import { Chat } from "./Chat.model";
 import { User } from "./User.model";
 
@@ -11,13 +11,14 @@ export class WichtelSession {
     @Column()
     chat: Chat;
 
-    @Column()
+    @ManyToOne(type => User, user => user.ownedWichtelSessions)
     creator: User;
 
     @PrimaryColumn()
     name: string;
 
-    @Column()
+    @ManyToMany(type => User)
+    @JoinTable()
     participants: User[];
 
 }
